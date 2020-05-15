@@ -1,0 +1,13 @@
+# The service, to access the deployment for the code you're developing
+kind: Service
+apiVersion: v1
+metadata:
+  name: demo1
+spec:
+  selector:
+    app: demo1
+  ports:
+  - protocol: TCP
+    port: 8080
+    nodePort: 30002
+  type: NodePort
